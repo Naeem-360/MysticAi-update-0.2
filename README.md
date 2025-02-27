@@ -66,6 +66,12 @@ This will launch the GUI for MysticAI.
 - Use "switch to voice" or "switch to text" to change modes.
 - Say "help" to see the list of available commands.
 
+## Note
+- This is not a beginner friendly ai model
+- You have to add some application location, add you github account link, facebook link, linkedIn link
+- Also you have to add your own api key (get api key from github market place for gpt-4o-mini)
+- You have to make a dotenv file and store that key as "GITHUB_TOKEN" name
+
 ## Contributing
 Feel free to fork the repository, make improvements, and submit pull requests! 😄
 
