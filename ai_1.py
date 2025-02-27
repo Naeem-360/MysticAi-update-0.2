@@ -655,7 +655,7 @@ def change_volume(increase=True):
     talk(f"Volume set to {int(new_volume * 100)} percent", gui)
 
 def open_vs_code_new_tab():
-    vscode_path = r"E:\VS Code\Microsoft VS Code\Code.exe"
+    vscode_path = r"Your VS Code path here"
     subprocess.Popen([vscode_path, "--new-window"])
     talk("Opening a new tab in VS Code", gui)
 
