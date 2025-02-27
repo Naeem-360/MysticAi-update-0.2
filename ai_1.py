@@ -30,7 +30,7 @@ from PyQt5.QtGui import QFont, QColor, QPalette, QPainter, QPen
 import re
 
 load_dotenv()
-api_key = os.getenv("GITHUB_TOKEN")
+api_key = os.getenv("GITHUB_TOKEN") # Get you gpt-4o-mini api key form github marketplace
 if not api_key:
     print("Error: API key not found. Please check your .env file.")
 else:
@@ -283,17 +283,17 @@ class HoloGUI(QWidget):
                 return
 
             if "github" in cleaned_command and "account" in cleaned_command:
-                url = "https://github.com/Naeem-360"
+                url = "Your GitHub account link here" #👈
                 webbrowser.open(url)
                 talk("Here is your GitHub account", self)
                 return
             elif "facebook" in cleaned_command and "account" in cleaned_command:
-                url1 = "https://web.facebook.com/tanzid.islam.211174/"
+                url1 = "Your Facebook Link here" #👈
                 webbrowser.open(url1)
                 talk("Here's your Facebook account", self)
                 return
             elif "linkedin" in cleaned_command and "account" in cleaned_command:
-                url2 = "https://www.linkedin.com/in/naeem-mahmud-/"
+                url2 = "Your LinkedIn account here" #👈
                 webbrowser.open(url2)
                 talk("Here is your LinkedIn account", self)
                 return
@@ -319,7 +319,6 @@ class HoloGUI(QWidget):
                 talk("Playing " + song, self)
                 try:
                     webbrowser.open(f"https://www.youtube.com/results?search_query={song}")
-                    # Uncomment once confirmed working: pywhatkit.playonyt(song)
                 except Exception as e:
                     talk(f"Failed to play '{song}': {str(e)}. Check your internet or browser.", self)
 
@@ -344,6 +343,7 @@ class HoloGUI(QWidget):
                 except Exception as e:
                     talk(f"Failed to play the Hindi song: {str(e)}", self)
 
+            
             elif "hit the phonk" in command:
                 talk("Playing the song", self)
                 try:
@@ -372,6 +372,7 @@ class HoloGUI(QWidget):
                 app = command.replace("close", "").replace("terminate", "").strip()
                 close_application(app)
 
+            
             elif "who" in command:
                 anything = command.replace("how", "").replace("who", "").replace("what", "").strip()
                 try:
@@ -411,11 +412,11 @@ class HoloGUI(QWidget):
 
             elif "open voicemod" in command or "voicemod" in command:
                 talk("Opening Voicemod", self)
-                subprocess.Popen(r"C:\Program Files\Voicemod V3\Voicemod.exe")
+                subprocess.Popen(r"Application path here (if you have this application)") #👈
             
             elif "open cursor" in command:
                 talk("Opening Cursor", self)
-                subprocess.Popen(r"C:\Users\Naeem\AppData\Local\Programs\cursor\Cursor.exe")
+                subprocess.Popen(r"Application path here (if you have this application)") #👈
             
             elif "open file explorer" in command or "open explorer" in command or "open this pc" in command:
                 talk("Opening File Explorer", self)
@@ -423,11 +424,11 @@ class HoloGUI(QWidget):
 
             elif "telegram" in cleaned_command:
                 talk("Opening Telegram", self)
-                subprocess.Popen(r"C:\Users\Naeem\AppData\Roaming\Telegram Desktop\Telegram.exe")
+                subprocess.Popen(r"Application path here (if you have this application)") #👈
 
             elif "chrome" in cleaned_command:
                 talk("Opening Chrome", self)
-                subprocess.Popen(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+                subprocess.Popen(r"Application path here (if you have this application)") #👈
 
             elif "word" in command or "wordpad" in command:
                 talk("Opening WordPad", self)
@@ -447,7 +448,7 @@ class HoloGUI(QWidget):
 
             elif "open cap" in command or "run cap" in command or "launch cap" in command:
                 talk("Opening Capcut", self)
-                subprocess.Popen(r"C:\Users\Naeem\AppData\Local\CapCut\Apps\CapCut.exe --src3")
+                subprocess.Popen(r"Application path here (if you have this application)") #👈
 
             elif "store" in command or "microsoft store" in command or "ms store" in command:
                 talk("Opening Microsoft Store", self)
@@ -455,7 +456,7 @@ class HoloGUI(QWidget):
 
             elif "open steam" in command or "steam" in command:
                 talk("Opening Steam", self)
-                subprocess.Popen(r"C:\Program Files (x86)\Steam\steam.exe")
+                subprocess.Popen(r"Application path here (if you have this application)") #👈
 
             elif "calculator" in command:
                 talk("Opening Calculator", self)
@@ -497,7 +498,7 @@ def get_greeting():
 
 def open_linkedin_in_chrome():
     try:
-        chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        chrome_path = r"Your Chrome path here" #👈
         url = "https://bd.linkedin.com/"
         subprocess.Popen([chrome_path, "--new-window", url])
         talk("Opening LinkedIn in Chrome", gui)
@@ -506,7 +507,7 @@ def open_linkedin_in_chrome():
 
 def open_github_in_chrome():
     try:
-        chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        chrome_path = r"Your Chrome path here" #👈
         url = "https://github.com/"
         subprocess.Popen([chrome_path, "--new-window", url])
         talk("Opening GitHub in Chrome", gui)
@@ -515,7 +516,7 @@ def open_github_in_chrome():
 
 def open_messenger_in_chrome():
     try:
-        chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        chrome_path = r"Your Chrome path here" #👈
         url = "https://www.messenger.com"
         subprocess.Popen([chrome_path, "--new-window", url])
         talk("Opening Messenger in Chrome", gui)
@@ -524,7 +525,7 @@ def open_messenger_in_chrome():
 
 def open_facebook_in_chrome():
     try:
-        chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        chrome_path = r"Your Chrome path here" #👈
         url = "https://www.facebook.com/"
         subprocess.Popen([chrome_path, "--new-window", url])
         talk("Opening Facebook in Chrome", gui)
